@@ -8,11 +8,12 @@ namespace AdapterPatternClient
         static void Main(string[] args)
         {
             var piano = new Piano();
-            IMusicDoReMi guQinToPianoAdapter = new PianoToGuQinAdapter(piano);
+            IMusicDoReMi pianoToGuQinAdapter = new PianoToGuQinAdapter(piano);
 
-            guQinToPianoAdapter.Do();
-            guQinToPianoAdapter.Re();
-            guQinToPianoAdapter.Mi();
+            // Play a piano like a guqin
+            pianoToGuQinAdapter.Do();
+            pianoToGuQinAdapter.Re();
+            pianoToGuQinAdapter.Mi();
             Console.ReadKey();
         }
     }
